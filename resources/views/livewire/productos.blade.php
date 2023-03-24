@@ -3,7 +3,7 @@
 
     <div class="rounded-lg border border-gray-200 shadow-md m-5 ">
         <div class="flex justify-around">
-            <select wire:model="perPage" class="ml-3">
+            <select wire:model="perPage" class="ml-3 my-3">
                 @foreach ($perPageOptions as $option)
                     <option value="{{ $option }}">{{ $option }}</option>
                 @endforeach

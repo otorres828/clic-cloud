@@ -12,18 +12,26 @@ class Inventario extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'tailwind';
-    public $buscar=null;
     public $perPage = 10;
     public $perPageOptions = [5, 10, 15, 20, 50];
     public $isOpen,$producto_id,$bodega_id,$inventario_id,$precio;
     public $sortField = 'id';
     public $sortDirection = 'asc';
+    public $buscar = "todas";
 
     public function render()
     {
-        $inventarios = BodegaProducto::where('user_id',auth()->user()->id)
-                                    ->orderBy($this->sortField, $this->sortDirection)
-                                    ->paginate($this->perPage);
+        
+        if($this->buscar=='todas'){ 
+            $inventarios = BodegaProducto::where('user_id',auth()->user()->id)
+                                        ->orderBy($this->sortField, $this->sortDirection)
+                                        ->paginate($this->perPage);
+        }else{
+            $inventarios = BodegaProducto::where('user_id',auth()->user()->id)
+                                            ->where('bodega_id',$this->buscar)
+                                            ->orderBy($this->sortField, $this->sortDirection)
+                                            ->paginate($this->perPage);    
+        }
         $bodegas = Bodega::where('user_id',auth()->user()->id)->get();
         $productos = Producto::where('user_id',auth()->user()->id)->get();
         return view('livewire.inventario',compact('inventarios','bodegas','productos'));

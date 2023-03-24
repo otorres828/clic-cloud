@@ -2,13 +2,18 @@
     <h1 class="font-semibold text-gray-700 text-ellipsis text-center pt-2">Listado de Inventario</h1>
     <div class="rounded-lg border border-gray-200 shadow-md m-5 ">
         <div class="flex justify-around">
-            <select wire:model="perPage" class="ml-3">
+            <select wire:model="perPage" class="ml-3 my-3">
                 @foreach ($perPageOptions as $option)
                     <option value="{{ $option }}">{{ $option }}</option>
                 @endforeach
             </select>
+            <select wire:model="buscar" class="m-3 rounded-lg w-full shadow-lg hover:bg-gray-50">
+                <option value="todas">Todas las bodegas</option>
+                @foreach ($bodegas as $bodega)
+                    <option value="{{ $bodega->id }}">{{ $bodega->nombre }}</option>
+                @endforeach
+            </select>
 
-     
             <button type="submit"wire:click="create()"
                 class="m-3 block w-full mr-8 rounded-md mt-3 p-2 text-indigo-100 bg-indigo-500 hover:bg-indigo-700">
                 Agregar
@@ -148,7 +153,7 @@
                                 <form>
                                     <div class="mb-4">
                                         <label class="block text-gray-700 text-sm font-bold mb-2" for="inventario_id">
-                                            Seleccione el inventario
+                                            Seleccione la bodega
                                         </label>
                                         <select wire:model="bodega_id"
                                             class="right-2 w-full p-2 shadow-lg hover:bg-gray-50">
