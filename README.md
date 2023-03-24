@@ -14,7 +14,7 @@ _aplicacion web, basada en un sistema de "inventario de bodegas y productos"  co
    
 ### Pre-requisitos 📋
  
-_Que cosas necesitas para instalar el software y como instalarlas
+_Que cosas necesitas para instalar el software y como instalarlas_
 
   * [PHP 7.x.x](https://www.php.net/downloads.php) - lenguaje de programacion
   
