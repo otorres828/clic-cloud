@@ -40,7 +40,7 @@ $ composer install
 $ npm install
 ```
 ### BASE DE DATOS 🔧
-3.  _descomenta el archivo **.env** y configura las variables de entorno con tu base de datos de preferencia "Postgresql o Mysql"_
+3.  _descomenta el archivo **.env.example** y cambiale el nombre a **.env** y configura las variables de entorno con tu base de datos de preferencia "Postgresql o Mysql"_
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1

@@ -8,10 +8,7 @@
                 @endforeach
             </select>
 
-            <input type="text" wire:model="buscar"
-                class="block w-full rounded-md border-0 p-2 m-3 text-gray-900 ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="Escribe algo relacionado al producto o inventario">
-
+     
             <button type="submit"wire:click="create()"
                 class="m-3 block w-full mr-8 rounded-md mt-3 p-2 text-indigo-100 bg-indigo-500 hover:bg-indigo-700">
                 Agregar
