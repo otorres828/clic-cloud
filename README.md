@@ -27,7 +27,7 @@ _Es posible/recomendado instalar un paquete como "[XAMPP] o Laragon (https://www
 * [Laravel 7.x](https://laravel.com/docs/7.x) - Framework web utilizado
 * [Node.js](https://nodejs.org/es/) - Usado para generar algunas depencias con npm
 
-### Preparacion del a Base de Datos (back) 🔧
+### INICIO 🔧
 
 1. Copiar el repositorio
 
