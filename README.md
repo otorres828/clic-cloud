@@ -32,7 +32,7 @@ _Es posible/recomendado instalar un paquete como "[XAMPP] o Laragon (https://www
 1. Copiar el repositorio
 
 ```
-$ git clone
+$ git clone https://github.com/otorres828/clic-cloud.git
 ```
 2. Instalar las dependencias de composer y npm
 ```
