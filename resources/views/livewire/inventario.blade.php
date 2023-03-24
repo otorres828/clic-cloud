@@ -33,7 +33,7 @@
                             </span>
 
                         </th>
-                        <th wire:click="sortBy('codigo')" class="cursor-pointer px-2 py-2 text-center">
+                        <th class="cursor-pointer px-2 py-2 text-center">
                             Producto
                             <span class="inline-block w-4 h-4 ml-1 text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -43,7 +43,7 @@
                             </span>
 
                         </th>
-                        <th wire:click="sortBy('nombre')" class="cursor-pointer text-center py-2">
+                        <th wire:click="sortBy('bodega_id')" class="cursor-pointer text-center py-2">
                             Bodega
                             <span class="inline-block w-4 h-4 ml-1 text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

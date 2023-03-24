@@ -22,6 +22,7 @@ class Inventario extends Component
     public function render()
     {
         $inventarios = BodegaProducto::where('user_id',auth()->user()->id)
+                                    ->orderBy($this->sortField, $this->sortDirection)
                                     ->paginate($this->perPage);
         $bodegas = Bodega::where('user_id',auth()->user()->id)->get();
         $productos = Producto::where('user_id',auth()->user()->id)->get();
