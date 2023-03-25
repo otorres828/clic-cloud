@@ -16,6 +16,3 @@ Route::post('register', [AuthController::class, 'register'])->name('register');
 
 Route::get('panel',[PanelController::class,'index'])->name('panel');
 
-
-Route::get('productos',[AuthController::class, 'mostrar_register'])->name('productos.index');
-Route::get('bodegas',[AuthController::class, 'mostrar_register'])->name('bodegas.index');
